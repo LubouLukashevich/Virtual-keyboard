@@ -1,0 +1,63 @@
+.page {
+  font-size: 10px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.content {
+  margin: auto;
+  width: 50%;
+  font-size: 2rem;
+}
+
+.text {
+  width: 100%;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1em;
+}
+
+.text:focus,
+.text:hover {
+  outline: none;
+}
+
+.content__keyboard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.letter,
+.control {
+  flex-basis: 7%;
+  margin-right: 0.5rem;
+  width: 30px;
+  height: 30px;
+}
+
+.size {
+  flex-basis: 8%;
+}
+
+.size15 {
+  flex-basis: 10%;
+}
+
+.size2 {
+  flex-basis: 14%;
+}
+
+.size25 {
+  flex-basis: 17%;
+}
+
+.space {
+  flex-basis: 49%;
+}
