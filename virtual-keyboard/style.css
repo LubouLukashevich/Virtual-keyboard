@@ -27,6 +27,12 @@
   padding-left: 0.5rem;
 }
 
+.content__help {
+  padding: 2rem 5rem 0;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
 .row {
   margin-top: 0.5rem;
   display: flex;

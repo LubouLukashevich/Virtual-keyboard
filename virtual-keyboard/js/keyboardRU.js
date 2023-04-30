@@ -1,6 +1,6 @@
-import { loadDataEN } from './dataEN.js';
+import { loadDataRU } from './dataRU.js';
 
-const data = loadDataEN();
+const data = loadDataRU();
 
 function generateTemplate(data) {
   let template = '';
@@ -16,6 +16,6 @@ function generateTemplate(data) {
   return template;
 }
 
-export function generateKeyboardEN() {
+export function generateKeyboardRU() {
   return (data)? generateTemplate(data) : 'No data';
 }

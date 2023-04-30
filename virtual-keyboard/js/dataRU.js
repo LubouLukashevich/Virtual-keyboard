@@ -1,5 +1,5 @@
 const row1 = [
-  ['`', true, '', 'Backquote'],
+  ['ё', true, '', 'Backquote'],
   ['1', false, '','Digit1'],
   ['2', false, '','Digit2'],
   ['3', false, '','Digit3'],
@@ -17,51 +17,51 @@ const row1 = [
 
 const row2 = [
   ['Tab', true, 'size','Tab'],
-  ['q', false, '','KeyQ'],
-  ['w', false, '','KeyW'],
-  ['e', false, '','KeyE'],
-  ['r', false, '','KeyR'],
-  ['t', false, '','KeyT'],
-  ['y', false, '','KeyY'],
-  ['u', false, '','KeyU'],
-  ['i', false, '','KeyI'],
-  ['o', false, '','KeyO'],
-  ['p', false, '','KeyP'],
-  ['[', false, '','BracketLeft'],
-  [']', false, '','BracketRigh'],
+  ['й', false, '','KeyQ'],
+  ['ц', false, '','KeyW'],
+  ['у', false, '','KeyE'],
+  ['к', false, '','KeyR'],
+  ['е', false, '','KeyT'],
+  ['н', false, '','KeyY'],
+  ['г', false, '','KeyU'],
+  ['ш', false, '','KeyI'],
+  ['щ', false, '','KeyO'],
+  ['з', false, '','KeyP'],
+  ['х', false, '','BracketLeft'],
+  ['ъ', false, '','BracketRigh'],
   ['\\', false, '','Backslash'],
   ['DEL', true, '','Delete']
 ];
 
 const row3 = [
   ['Caps Lock', true, 'size25','CapsLock'],
-  ['a', false, '','KeyA'],
-  ['s', false, '','KeyS'],
-  ['d', false, '','KeyD'],
-  ['f', false, '','KeyF'],
-  ['g', false, '','KeyG'],
-  ['h', false, '','KeyH'],
-  ['j', false, '','KeyJ'],
-  ['k', false, '','KeyK'],
-  ['l', false, '','KeyL'],
-  [';', false, '','Semicolon'],
-  ["'", false, '','Quote'],
+  ['ф', false, '','KeyA'],
+  ['ы', false, '','KeyS'],
+  ['в', false, '','KeyD'],
+  ['а', false, '','KeyF'],
+  ['п', false, '','KeyG'],
+  ['р', false, '','KeyH'],
+  ['о', false, '','KeyJ'],
+  ['л', false, '','KeyK'],
+  ['д', false, '','KeyL'],
+  ['ж', false, '','Semicolon'],
+  ['э', false, '','Quote'],
   ['ENTER', true, 'size2','Enter']
 ];
 
 const row4 = [
   ['Shift', true, 'size25','ShiftLeft'],
   ['\\', false, '','IntlBackslash'],
-  ['z', false, '','KeyZ'],
-  ['x', false, '','KeyX'],
-  ['c', false, '','KeyC'],
-  ['v', false, '','KeyV'],
-  ['b', false, '','KeyB'],
-  ['n', false, '','KeyN'],
-  ['m', false, '','KeyM'],
-  [',', false, '','Comma'],
-  ['.', false, '','Period'],
-  ['/', false, '','Slash'],
+  ['я', false, '','KeyZ'],
+  ['ч', false, '','KeyX'],
+  ['с', false, '','KeyC'],
+  ['м', false, '','KeyV'],
+  ['и', false, '','KeyB'],
+  ['т', false, '','KeyN'],
+  ['ь', false, '','KeyM'],
+  ['б', false, '','Comma'],
+  ['ю', false, '','Period'],
+  ['.', false, '','Slash'],
   ['&uarr;', true,'','ArrowUp'],
   ['Shift', true,'','ShiftRight']
 ];
@@ -78,8 +78,7 @@ const row5 = [
   ['&rarr;', true, '','ArrowRight']
 ];
 
-export function loadDataEN () {
+export function loadDataRU () {
   const allData = [row1, row2, row3, row4, row5];
   return allData;
 }
-
