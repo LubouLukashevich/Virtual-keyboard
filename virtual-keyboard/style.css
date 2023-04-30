@@ -24,6 +24,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  padding-left: 0.5rem;
 }
 
 .row {
@@ -35,11 +36,17 @@
 
 
 .letter,
-.control {
+.letter_control {
   flex-basis: 7%;
   margin-right: 0.5rem;
   width: 30px;
   height: 30px;
+  background: transparent;
+  border: 1px solid gray;
+}
+
+.letter_control {
+  background-color: honeydew;
 }
 
 .size {
