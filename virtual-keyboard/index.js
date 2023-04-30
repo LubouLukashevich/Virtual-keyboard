@@ -8,14 +8,15 @@ window.onload = function() {
 
   //Generate keyboard
   renderKeyboard();
+
+  //Handler for tapping key of physical keyboard
+  addbuttonClickHandler();
 }
 
 const renderContent = () => {
   let head = document.head;
-  console.log(head);
   let body = document.createElement('body');
   body.className = 'page';
-  console.log(body);
   head.after(body);
   body.append(generateContent());
 }
@@ -25,3 +26,24 @@ const renderKeyboard = () => {
   container.innerHTML = generateKeyboard();
 }
 
+
+
+const addbuttonClickHandler = () => {
+  document.addEventListener('keydown', function(event) {
+    addSelectKey(event.code);
+  });
+  
+  document.addEventListener('keyup', function(event) {
+    setTimeout(() => removeSelectKey(event.code), 200);
+  });
+}
+
+const addSelectKey = (key) => {
+  let button = document.getElementById(key);
+  button.classList.add('key_select');
+}
+
+const removeSelectKey = (key) => {
+  let button = document.getElementById(key);
+  button.classList.remove('key_select');
+}

@@ -7,9 +7,9 @@ function generateTemplate(data) {
   data.forEach(element => {
     template += '<div class="row">'
     element.forEach(el => {
-      let style = (el[1])? ('letter_control') : ('letter');
+      let style = (el[1])? ('key key_control') : ('key');
       if (el[2] !== '') style = style + ' ' + el[2]; 
-      template += `<button class="${style}">${el[0]}</button>`;
+      template += `<button id="${el[3]}" class="${style}">${el[0]}</button>`;
     });
     template += '</div>'
   });

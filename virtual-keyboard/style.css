@@ -35,8 +35,7 @@
 }
 
 
-.letter,
-.letter_control {
+.key {
   flex-basis: 7%;
   margin-right: 0.5rem;
   width: 30px;
@@ -45,8 +44,15 @@
   border: 1px solid gray;
 }
 
-.letter_control {
+.key_control {
   background-color: honeydew;
+}
+
+.key_select,
+.key:active {
+  background-color: mediumTurquoise;
+  box-shadow: 0 0 2px 2px turquoise; 
+  transition: all 0.2s ease-out;
 }
 
 .size {
