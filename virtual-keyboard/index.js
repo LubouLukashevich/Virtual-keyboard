@@ -6,6 +6,8 @@ import { generateKeyboardRU } from './js/keyboardRU.js';
 let language = 'EN';
 //Current pressed keys
 let pressKey = new Set();
+//cursor position
+let cursorPosition = 0;
 
 //-----Local Storage-----
 // In
@@ -32,7 +34,14 @@ window.onload = function() {
   renderKeyboard();
 
   //Handler for tapping key of physical keyboard
-  addbuttonClickHandler();
+  addKeysClickHandler();
+
+  //Handler for tapping buttons of virtual keyboard
+  addButtonsClickHandler();
+
+  //Focus text
+  addFocus();
+
 }
 
 const renderContent = () => {
@@ -56,11 +65,14 @@ const renderKeyboard = () => {
   }
 }
 
-const addbuttonClickHandler = () => {
+const addKeysClickHandler = () => {
   document.addEventListener('keydown', function(event) {
+    addFocus();
     pressKey.add(event.code);
     addSelectKey(event.code);
-    languageCheck();
+    if (languageCheck()) {
+      addFocus();
+    };
   });
   
   document.addEventListener('keyup', function(event) {
@@ -83,5 +95,30 @@ const languageCheck = () => {
   if (pressKey.has('AltLeft') && pressKey.has('ShiftLeft')) {
     (language === 'EN')? language = 'RU' : language = 'EN';
     renderKeyboard();
+    addFocus();
+  } else {
+    return true
   }
+}
+
+const addButtonsClickHandler = () => {
+  let buttons = document.querySelectorAll('.key');
+  buttons.forEach(el =>
+    el.addEventListener('click', addChar));
+}
+
+const addChar = (e) => {
+  let textarea = document.querySelector('.text');
+  addFocus();
+  if (e.target.innerHTML === 'Tab') { 
+    textarea.innerHTML += '    ';
+  } else {
+    textarea.innerHTML += e.target.innerHTML;
+  }
+}
+
+const addFocus = () => {
+  let textarea = document.querySelector('.text');
+  textarea.focus();
+  cursorPosition = textarea.selectionStart;
 }
